@@ -1,4 +1,5 @@
-
+// Init root html file, use an html template file if need any further configuration
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 //config loader scss/sass ts/js
 // images??
 // code splitting and lazy loading
@@ -20,5 +21,6 @@ module.exports = {
                 exclude: /node_modules/,
             }
         ],
-    }
+    },
+    plugins: [new HtmlWebpackPlugin({template: './src/index.html'})]
 }
