@@ -1,0 +1,15 @@
+// Preset react : compile jsx to js object
+// Preset env : tranform to target env. for instance:
+/*
+    {
+        chrome: 58,
+        ie: 11
+    }
+*/
+
+// plugin transform: add missing polifill support old browser
+// Should be added detail config later
+{
+    "presets": ["@babel/preset-react", "@babel/preset-env"],
+    "plugins": ["@babel/plugin-transform-runtime"]
+}
