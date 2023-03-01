@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./configs/webpack.config.pred.js",
+    "build": "webpack --config ./configs/webpack.config.prod.js",
     "start": "webpack serve --config ./configs/webpack.config.dev.js",
+    "valid-dev": "webpack configtest ./configs/webpack.config.dev.js",
+    "valid-prod": "webpack configtest ./configs/webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
