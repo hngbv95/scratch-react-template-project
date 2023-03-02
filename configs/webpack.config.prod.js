@@ -6,5 +6,13 @@ const commonConfig = require('./webpack.common');
 /** @type {import('webpack').Configuration}  */
 module.exports = {
     ...commonConfig,
+    output: {
+        filename: '[name].bundle.js'
+    },
+    optimization : {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     mode: 'production',
 }
