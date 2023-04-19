@@ -1,5 +1,7 @@
 // Init root html file, use an html template file if need any further configuration
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 //config loader scss/sass ts/js
 // images??
 // code splitting and lazy loading
@@ -22,5 +24,11 @@ module.exports = {
             }
         ],
     },
-    plugins: [new HtmlWebpackPlugin({template: './src/index.html'})]
+    plugins: [
+        new HtmlWebpackPlugin({template: './src/index.html'}),
+        new ESLintPlugin({
+            extensions: ['js', 'jsx', 'ts', 'tsx'],
+            exclude: '/node_modules/'
+        })
+    ]
 }

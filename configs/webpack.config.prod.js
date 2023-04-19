@@ -7,7 +7,8 @@ const commonConfig = require('./webpack.common');
 module.exports = {
     ...commonConfig,
     output: {
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        clean: true,
     },
     optimization : {
         splitChunks: {
