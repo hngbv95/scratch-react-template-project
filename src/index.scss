@@ -1,0 +1,9 @@
+:root {
+    --theme-bg-color: coral;
+    --container-color: #44cde8;
+}
+
+body {
+    margin: 0;
+    background-color: var(--theme-bg-color);
+}
